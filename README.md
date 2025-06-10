@@ -5,7 +5,7 @@ Este projeto em **C#** demonstra os conceitos de **herança**, **polimorfismo** 
 ---
 
 ## 📁 Estrutura do Projeto
-
+````bash
 SistemaFuncionarios/
 │
 ├── Main.cs // Classe principal com execução do programa
@@ -14,7 +14,7 @@ SistemaFuncionarios/
 ├── Gerente.cs // Subclasse Gerente
 └── README.md // Documentação do projeto
 
-
+````
 ---
 
 ## 📚 Descrição das Classes
@@ -40,7 +40,9 @@ class Funcionario
         Console.WriteLine($"{Nome} é um Funcionário. O salário base de um Funcionário é de R${SalarioBase}");
     }
 }
-
+````
+### Desenvolvedor.cs
+````csharp
 class Desenvolvedor : Funcionario
 {
     public Desenvolvedor(string nome) : base(nome)
@@ -56,7 +58,9 @@ class Desenvolvedor : Funcionario
         Console.WriteLine($"{Nome} é um Desenvolvedor. O salário base é R${SalarioBase} com bônus fixo de R$500. Total R${SalarioBase + 500}");
     }
 }
-
+````
+### Gerente.cs
+````csharp
 class Gerente : Funcionario
 {
     public Gerente(string nome) : base(nome)
@@ -72,7 +76,10 @@ class Gerente : Funcionario
         Console.WriteLine($"{Nome} é um Gerente. O salário base é R${SalarioBase} com bônus de 10%. Total R${SalarioBase + (SalarioBase * 0.10)}");
     }
 }
+````
+### Program.cs ou Main.cs
 
+````csharp
 class Program
 {
     static void Main(string[] args)
@@ -87,12 +94,9 @@ class Program
         gerente.CalcularSalarioTotal();
     }
 }
-
-💡 Conceitos Demonstrados
-Herança com classes derivadas
-
-Polimorfismo e sobrescrita de métodos (override)
-
-Encapsulamento com propriedades
-
-Organização de código em múltiplos arquivos
+````
+##💡 Conceitos Demonstrados
+- Herança com classes derivadas
+- Polimorfismo e sobrescrita de métodos (override)
+- Encapsulamento com propriedades
+- Organização de código em múltiplos arquivos
